@@ -1,0 +1,255 @@
+.account-page {
+    min-height: 100dvh;
+    padding: 140px 6vw 80px;
+    background: linear-gradient(
+        120deg, 
+        #5f5875 0%, 
+        #26242d 48%, 
+        #201E27 100%
+    );
+}
+
+.account-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.account-label {
+    color: #B3C1D6;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .28rem;
+    font-size: .72rem;
+    font-weight: 600;
+}
+
+.account-header h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    margin: .5rem 0 1rem;
+    color: #D9D9D9;
+    opacity: .9;
+    line-height: .9;
+}
+
+.account-header p {
+    max-width: 620px;
+    margin-bottom: 12px;
+    color: #D9D9D9;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
+    opacity: .6;
+}
+
+
+.account-logout-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border: 1px solid rgba(38,36,45,.12);
+    border-radius: 999px;
+    background: #B3C1D6;
+    color: #26242D;
+    font-family: "Poppins", sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.account-logout-button:hover {
+    background: #D9D9D9;
+    color: #26242D;
+    transform: translateY(-2px);
+}
+
+.account-content {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.account-card {
+    grid-column: span 2;
+    padding: 28px;
+    border-radius: 24px;
+    background: #D9D9D9;
+}
+
+.account-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.account-card-header span,
+.account-navigation-card span {
+    color: #73717A;
+    font-family: "Poppins", sans-serif;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+}
+
+.account-card-header h2,
+.account-navigation-card h2 {
+    margin: .45rem 0 0;
+    color: #26242D;
+    font-family: "Syne", sans-serif;
+    font-size: 1.8rem;
+}
+
+.account-card-header > svg {
+    width: 25px;
+    height: 25px;
+    color: #26242D;
+}
+
+.account-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.account-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 0;
+    border-top: 1px solid rgba(38,36,45,.1);
+}
+
+
+.account-info-item span {
+    color: #77737C;
+    font-family: "Poppins", sans-serif;
+    font-size: .72rem;
+}
+
+
+.account-info-item strong {
+    color: #26242D;
+    font-family: "Poppins", sans-serif;
+    font-size: .95rem;
+}
+
+.account-navigation-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 180px;
+    padding: 28px;
+    border: none;
+    border-radius: 24px;
+    background: #B3C1D6;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.account-navigation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(38,36,45,.1);
+
+}
+
+
+.account-navigation-card p {
+    margin: 1rem 0 0;
+    color: #5D6674;
+    font-family: "Poppins", sans-serif;
+    font-size: .82rem;
+    line-height: 1.6;
+}
+
+
+.account-navigation-card > svg {
+    width: 24px;
+    height: 24px;
+    transition: transform .3s ease;
+}
+
+
+.account-navigation-card:hover > svg {
+    transform: translateX(7px);
+}
+
+/* ESTADOS */
+
+.account-loading,
+.account-unauthenticated {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+}
+
+.account-loading p,
+.account-unauthenticated p {
+    color: #77737C;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.account-unauthenticated h1 {
+    margin: 0 0 12px;
+    color: #26242D;
+    font-family: "Syne", sans-serif;
+    font-size: 3rem;
+}
+
+
+@media (max-width: 800px) {
+    .account-page {
+        padding: 120px 24px 60px;
+    }
+
+    .account-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .account-content {
+        grid-template-columns: 1fr;
+    }
+
+    .account-card {
+        grid-column: auto;
+    }
+
+    .account-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .account-page {
+        padding: 105px 18px 40px;
+    }
+
+    .account-header h1 {
+        font-size: 3rem;
+    }
+
+    .account-card,
+    .account-navigation-card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+}

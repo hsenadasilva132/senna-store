@@ -1,0 +1,145 @@
+.payment-summary {
+    background: #26242D;
+    border: 1px solid rgba(255, 255, 255, .06);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 24px;
+}
+
+.payment-summary-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-summary-header h2 {
+    margin-bottom: 0;
+    color: #D9D9D9;
+    font-size: 2rem;
+}
+
+.payment-summary-header span {
+    font-family: "Poppins", sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #B3C1D6;
+}
+
+.payment-summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+.payment-summary-products {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.summary-product {
+    color: #8F8A9F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.summary-product span {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.summary-product strong {
+    font-weight: 600;
+}
+
+.summary-product small {
+    font-size: .8rem;
+}
+
+.summary-row {
+    color: #8F8A9F;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-row:first-child {
+    color: #D9D9D9;
+    font-weight: 500;
+}
+
+.payment-summary-total {
+    background: #B3C1D6;
+    border-radius: 999px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.payment-summary-total:hover {
+    transform: translateY(-4px);
+    
+}
+
+.payment-summary-total span {
+    margin-bottom: .3rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.payment-summary-total small {
+    font-family: "Poppins", sans-serif;
+}
+
+.payment-summary-total h2 {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+@media(max-width: 768px) {
+    .payment-summary {
+        gap: 18px;
+    }
+
+    .payment-summary-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .payment-summary-header span {
+        font-size: .6rem;
+    }
+
+    .payment-summary-content {
+        padding: 18px;
+    }
+
+    .payment-summary-total {
+        padding: 8px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .payment-summary-total h2 {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    .payment-summary-total span {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+    }
+}

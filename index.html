@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logoSennaStore.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>senna-store</title>
+
+    <style>
+      #initial-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #26242D;
+        transition: opacity .7s ease, visibility .7s ease;
+    }
+
+    #initial-preloader.initial-preloader-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .initial-preloader-content {
+        width: min(calc(100% - 48px), 600px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 48px 0;
+        box-sizing: border-box;
+    }
+
+
+    .initial-preloader-logo {
+        color: #B3C1D6;
+        font-family: "Syne", sans-serif;
+        font-size: clamp(2.5rem, 7vw, 5rem);
+        font-weight: 600;
+        letter-spacing: -.08em;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: initialLogoIn .7s ease forwards;
+    }
+
+    .initial-preloader-bottom {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 18px;
+    }
+
+    #initial-preloader-counter {
+        min-width: 42px;
+        color: #B3C1D6;
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+
+    .initial-preloader-line {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        overflow: hidden;
+        background:rgba(217, 217, 217, .2);
+    }
+
+
+    #initial-preloader-progress {
+        width: 100%;
+        height: 100%;
+        background: #B3C1D6;
+        transform: scaleX(0);
+        transform-origin: left center;
+        animation: initialProgress 2.2s cubic-bezier(.22, 1, .36, 1) forwards;
+
+    }
+
+    .initial-preloader-label {
+        color: rgba(192, 183, 183, .65);
+        font-family: "Poppins", sans-serif;
+        font-size: .65rem;
+        white-space: nowrap;
+    }
+
+
+    @keyframes initialLogoIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    @keyframes initialProgress {
+        to {
+            transform: scaleX(1);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .initial-preloader-content {
+            padding: 32px 0;
+        }
+
+        .initial-preloader-logo {
+            font-size: 2.8rem;
+        }
+
+        .initial-preloader-bottom {
+            grid-template-columns: auto 1fr;
+        }
+
+        .initial-preloader-label {
+            grid-column: 1 / -1;
+            margin-top: 6px;
+        }
+    }
+    </style>
+  </head>
+  
+  <body>
+    <div id="initial-preloader">
+
+      <div class="initial-preloader-content">
+
+          <div class="initial-preloader-logo">
+              SennaStore
+          </div>
+
+          <div class="initial-preloader-bottom">
+
+              <span id="initial-preloader-counter">
+                  0%
+              </span>
+
+              <div class="initial-preloader-line">
+
+                  <div
+                      id="initial-preloader-progress"
+                  ></div>
+
+              </div>
+
+              <span class="initial-preloader-label">
+                  Preparando sua experiência
+              </span>
+
+          </div>
+
+      </div>
+
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+    const preloader = document.getElementById('initial-preloader');
+
+    const counter = document.getElementById('initial-preloader-counter');
+
+    const progress = document.getElementById('initial-preloader-progress');
+
+    const alreadyShown =
+        sessionStorage.getItem(
+            'senna-preloader-shown'
+        );
+
+    if (alreadyShown) {
+        preloader.style.display = 'none';
+    } else {
+        let value = 0;
+        const interval =
+            setInterval(() => {
+                value += 1;
+                counter.textContent =
+                    `${value}%`;
+                if (value >= 100) {
+                    clearInterval(interval);
+                }
+            }, 20);
+
+      window.addEventListener(
+        'load',
+        () => {
+          sessionStorage.setItem(
+            'senna-preloader-shown',
+            'true'
+          );
+
+          setTimeout(() => {
+            preloader.classList.add(
+              'initial-preloader-hidden'
+            );
+          }, 250);
+        }
+      );
+    }
+
+</script>
+  </body>
+</html>

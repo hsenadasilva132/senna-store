@@ -1,0 +1,36 @@
+.loading-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loading-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(179, 193, 214, .18);
+    color: #26242D;
+    overflow: hidden;
+}
+
+.loading-icon svg {
+    width: 30px;
+    height: 30px;
+    animation: loadingIconIn .35s ease;
+}
+
+@keyframes loadingIconIn {
+    from {
+        opacity: 0;
+        transform: scale(.6) rotate(-15deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}

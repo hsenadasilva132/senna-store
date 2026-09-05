@@ -1,0 +1,74 @@
+.coming-soon-container {
+    background: linear-gradient(
+        120deg, 
+        #5f5875 0%, 
+        #26242d 48%, 
+        #201E27 100%
+    );
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 420px);
+    padding: 36px;
+    border-radius: 24px;
+    background: linear-gradient(
+        24deg, 
+        #5f5875 0%, 
+        #26242d 48%, 
+        #201E27 100%
+    );
+    opacity: .8;
+    text-align: center;
+}
+
+
+.coming-soon-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #B3C1D6;
+    color: #26242D;
+}
+
+
+.coming-soon-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+
+.coming-soon > span {
+    color: #8997AE;
+    font-family: "Poppins", sans-serif;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .14rem;
+}
+
+
+.coming-soon h3 {
+    margin: 8px 0 10px;
+    color: #D9D9D9;
+    font-family: "Syne", sans-serif;
+    font-size: 1.8rem;
+}
+
+
+.coming-soon p {
+    margin-bottom: 16px;
+    color: #77737C;
+    font-family: "Poppins", sans-serif;
+    font-size: .82rem;
+    line-height: 1.7;
+}

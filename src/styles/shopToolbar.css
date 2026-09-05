@@ -1,0 +1,309 @@
+.shop-toolbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 18px;
+    border: 1px solid rgba(217, 217, 217, .08);
+    border-radius: 999px;
+    /* border-bottom: 1px solid rgba(217, 217, 217, .08); */
+}
+
+.shop-sale-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 320px;
+    /* padding: 6px 8px 6px 14px; */
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #B3C1D6;
+    font-family: "Poppins", sans-serif;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.shop-sale-filter button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 50%;
+    background: #26242D;
+    color: #D9D9D9;
+    font-size: .6rem;
+    cursor: pointer;
+    transition: transform .25s ease,
+                background .25s ease;
+}
+.shop-sale-filter button:hover {
+    transform: rotate(180deg);
+}
+
+.shop-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-width: 0;
+}
+
+.shop-search {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 18px;
+    border: 1px solid rgba(217, 217, 217, .15);
+    border-radius: 999px;
+    background: #B3C1D6;
+}
+
+.shop-search svg {
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+.shop-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #26242D;
+    font-family: "Poppins", sans-serif;
+    font-size: .9rem;
+}
+
+.shop-search input::placeholder {
+    color: #26242D;
+}
+
+.shop-results-count {
+    color: #D9D9D9;
+    font-family: "Poppins", sans-serif;
+    font-size: .9rem;
+    white-space: nowrap;
+}
+
+
+
+.shop-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.shop-select {
+    position: relative;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 18px;
+    border: 1px solid rgba(217, 217, 217, .15);
+    border-radius: 999px;
+    background: #B3C1D6;
+    font-family: "Poppins", sans-serif;
+}
+
+.shop-select span {
+    font-family: "Poppins", sans-serif;
+    color: #26242D;
+    font-size: .78rem;
+}
+
+
+
+.shop-select-button {
+    width: 100%;
+    max-height: 52px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 999px;
+    background: #B3C1D6;
+    color: #26242D;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition:    
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.shop-select-button:hover {
+    background: #C1CCDD;
+}
+
+.shop-select-label {
+    font-weight: 700;
+    font-size: .78rem;
+    color: #4D4B55;
+}
+
+.shop-select-value {
+    flex: 1;
+    text-align: left;
+    font-size: .82rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.shop-select-arrow {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    transition: transform .3s ease;
+}
+
+.shop-select.open
+.shop-select-arrow {
+    transform: rotate(180deg);
+}
+
+.shop-select-options {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    min-width: 190px;
+    padding: 7px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: #D9D9D9;
+    border: 1px solid rgba(38, 36, 45, .08);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(38, 36, 45, .14);
+    z-index: 100;
+    animation: shopDropDown .2s ease;
+}
+
+.shop-select-option {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #26242D;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: .82rem;
+    cursor: pointer;
+    transition: 
+        transform .2s ease,
+        color .2s ease;
+}
+
+.shop-select-option:hover {
+    background: #B3C1D6;
+}
+
+.shop-select-option.selected {
+    background: #B3C1D6;
+    font-weight: 600;
+}
+
+ @keyframes shopDropDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+/* .shop-select select {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #F7F5F5;
+    font-family: "Poppins", sans-serif;
+    font-size: .85rem;
+    cursor: pointer;
+    padding-right: 18px;
+}
+
+.shop-select option {
+    text-align: center;
+    background: #B3C1D6;
+    color: #F7F5F5;
+}
+
+.shop-select > svg {
+    position: absolute;
+    right: 16px;
+    pointer-events: none;
+    color: #26242D;
+    font-size: .95rem;
+} */
+
+
+@media(max-width: 1024px) {
+    .shop-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        border: none;
+    }
+
+    .shop-toolbar-left,
+    .shop-toolbar-right {
+        width: 100%;
+    }
+
+    .shop-toolbar-right {
+        justify-content: flex-start;
+    }
+}
+
+@media(max-width: 700px) {
+    .shop-toolbar {
+        gap: 16px;
+    }
+
+    .shop-toolbar-left {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .shop-sale-filter {
+        width: 50%;
+    }
+
+    .shop-search {
+        width: 100%;
+    }
+
+    .shop-results-count {
+        font-size: .85rem;
+    }
+
+    .shop-toolbar-right {
+        display: grid;
+        grid-template-columns: 0.5fr;
+    }
+
+    .shop-select {
+        min-width: 0;
+        width: 100%;
+    }
+
+
+    /* .shop-select span {
+        display: none;
+    } */
+
+    .shop-select select {
+        width: 100%;
+    }
+}

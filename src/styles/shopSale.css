@@ -1,0 +1,243 @@
+.shop-sale {
+    position: relative;
+    width: 100%;
+    min-height: 620px;
+    margin-top: 24%;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 32px;
+    padding: 64px;
+    overflow: hidden;
+    border-radius: 36px;
+    background: 
+        radial-gradient(
+        circle at 15% 20%,
+        rgba(179, 193, 214, .16),
+        transparent 40%
+    ),
+    linear-gradient(
+        135deg,
+        #302D39,
+        #26242D
+    );
+}
+
+.shop-sale-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 560px;
+}
+
+.shop-sale-label {
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    color: #B3C1D6;
+    font-family: "Poppins", sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+}
+
+.shop-sale-content h2 {
+    margin: 0;
+    color: #D9D9D9;
+    opacity: .7;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: .98;
+}
+
+.shop-sale-content p {
+    max-width: 480px;
+    margin: 1.8rem 0 2.5rem;
+    color: #D9D9D9;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.shop-sale-timer {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-bottom: 2.5rem;
+}
+
+.timer-item {
+    min-width: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .9rem .7rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(255, 255, 255, .07);
+    backdrop-filter: blur(10px);
+}
+
+.timer-item strong {
+    color: #D9D9D9;
+    font-family: "Syne", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.timer-item span {
+    margin-top: .45rem;
+    color: rgba(217, 217, 217, .55);
+    font-family: "Poppins", sans-serif;
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+}
+
+.timer-divider {
+    color: #B3C1D6;
+    font-family: "Syne", sans-serif;
+    font-size: 1.4rem;
+    opacity: .7;
+}
+
+.shop-sale-gallery {
+    position: relative;
+    min-height: 520px;
+}
+
+.shop-sale-image {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 28px;
+    background: #D9D9D9;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .2);
+}
+
+.shop-sale-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.image-main {
+    width: 58%;
+    height: 58%;
+    left: 0;
+    top: 12%;
+}
+
+.image-secondary {
+    width: 43%;
+    height: 45%;
+    right: 0;
+    top: 0;
+}
+
+.image-third {
+    width: 43%;
+    height: 45%;
+    right: 0;
+    bottom: 0;
+}
+
+.shop-sale-image:hover img {
+    transform: scale(1.06);
+}
+
+.shop-sale-gallery::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: 
+        radial-gradient(
+            circle,
+            rgba(179, 193, 214, .16)
+            transparent 70%
+        );
+    pointer-events: none;
+}
+
+@media(max-width: 1000px) {
+    .shop-sale {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+    }
+    .shop-sale-content {
+        max-width: 100%;
+    }
+
+    .shop-sale-gallery {
+        min-height: 500px;
+    }
+}
+
+@media(max-width: 700px) {
+    .shop-sale {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem 2.5rem;
+        border-radius: 28px;
+    }
+
+    .shop-sale-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .shop-sale-content p {
+        font-size: .9rem;
+    }
+
+    .shop-sale-timer {
+        width: 100%;
+        justify-content: space-around;
+        gap: .3rem;
+    }
+
+    .timer-item {
+        min-width: 58px;
+        padding: .75rem .45rem;
+    }
+
+    .timer-item strong {
+        font-size: 1.35rem;
+    }
+
+    .timer-divider {
+        font-size: 1rem;
+    }
+
+    .shop-sale-gallery {
+        min-height: 360px;
+        margin-top: 1rem;
+    }
+
+    .image-main {
+        width: 58%;
+        height: 56%;
+        left: 0;
+        top: 10%;
+    }
+
+    .image-secondary {
+        width: 43%;
+        height: 43%;
+        right: 0;
+        top: 0;
+    }
+
+    .image-third {
+        width: 42%;
+        height: 43%;
+        right: 0;
+        bottom: 0;
+    }
+}

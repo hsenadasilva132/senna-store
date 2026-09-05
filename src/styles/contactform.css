@@ -1,0 +1,44 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.contact-form p {
+    font-family: "Poppins", sans-serif;
+    margin-top: 8px;
+}
+
+form input, textarea {
+    width: 100%;
+    border: none;
+    padding: 16px 18px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .18);
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+form textarea {
+    resize: none;
+    min-height: 140px;
+}
+
+form button {
+    margin-top: 8px;
+}
+
+.contact-status {
+    display: block;
+    margin-top: 16px;
+    font-family: "Poppins", sans-serif;
+    font-size: .85rem;
+    color: #26242D;
+}

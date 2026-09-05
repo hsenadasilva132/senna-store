@@ -1,0 +1,186 @@
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-methods-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-methods-header span {
+    color: #B3C1D6;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+.payment-methods-header h2 {
+    color: #D9D9D9;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.payment-methods-header p {
+    max-width: 450px;
+    color: #D9D9D9;
+    opacity: .7;
+    line-height: 1.6;
+}
+
+.payment-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+
+/*----------- PaymentMethodCard ------------- */
+
+/* .payment-method-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg, 
+        #5f5875 0%, 
+        #322e3f 35%, 
+        #4a3552 70%, 
+        #201E27 100%
+    );
+    opacity: 0;
+    transition: opacity .8s ease;
+} 
+    
+.payment-method-card.active::before {
+    opacity: 1;
+}
+*/
+
+@property --reveal {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+.payment-method-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg, 
+        #5f5875 0%, 
+        #322e3f 35%, 
+        #4a3552 70%, 
+        #201E27 100%
+    );
+    --reveal: 0%;
+    -webkit-mask-image: linear-gradient(135deg, black 0%, black calc(var(--reveal) - 15%), transparent var(--reveal));
+    mask-image: linear-gradient(135deg, black 0%, black calc(var(--reveal) - 15%), transparent var(--reveal));
+    transition: --reveal 1.5s ease;
+}
+
+.payment-method-card.active::before {
+    --reveal: 140%;
+}
+
+.payment-method-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 12px;
+    border: 1px solid #B3C1D6;
+    border-radius: 24px;
+    background: #2E2B3A;
+    cursor: pointer;        
+    transition: .3s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.payment-method-card:hover {
+    transform: translateY(-4px);
+    border-color: #D9D9D9;
+}
+
+.payment-icon {
+    width: 58px;
+    height: 58px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(186, 200, 224, .08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #B3C1D6;
+    z-index: 1;
+}
+
+.payment-info h3 {
+    position: relative;
+    color: #D9D9D9;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.payment-info p {
+    color: #D9D9D9;
+    opacity: .7;
+    line-height: 1.6;
+}
+
+.payment-check {
+    color: #D9D9D9;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity .25s ease;
+    z-index: 1;
+}
+
+.payment-method-card.active {
+    z-index: 1;
+}
+
+.payment-method-card.active .payment-check {
+    opacity: 1;
+}
+
+
+@media(max-width: 768px) {
+    .payment-method-card {
+        padding: 24px;
+    }
+}
+
+/*----------- PaymentMethodCard ------------- */
+
+
+
+
+
+@media(max-width: 900px) {
+    .payment-methods-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 768px) {
+    .payment-methods {
+        gap: 24px;
+    }
+
+    .payment-methods-header h2 {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,61 @@
+.button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 12px;
+    padding: 8px 8px 8px 24px;
+    border: none;
+    border-radius: 999px;
+    background: #D9D9D9;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: color .3s ease;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #B3C1D6;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s ease;
+    z-index: 1;
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+}
+
+.button-text {
+    position: relative;
+    z-index: 2;
+    color: #111;
+    transition: color .3s ease;
+}
+
+.button:hover .button-text {
+    color: #F7F5F5;
+}
+
+.button-arrow {
+    position: relative;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #B3C1D6;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+.button:hover .button-arrow {
+    transform: translateX(10px);
+}

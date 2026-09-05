@@ -1,0 +1,28 @@
+.payment-page {
+    background: linear-gradient(
+        120deg, 
+        #5f5875 0%, 
+        #26242d 48%, 
+        #201E27 100%
+    );
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+@media(min-width: 1024px) {
+    .payment-page {
+        padding-top: 24px;
+        gap: 3rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .payment-page {
+        width: 100%;
+        gap: 2rem;
+    }
+}

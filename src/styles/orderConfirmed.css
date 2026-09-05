@@ -1,0 +1,125 @@
+.confirmed-page {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        120deg, 
+        #5f5875 0%, 
+        #26242d 48%, 
+        #201E27 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 22px;
+    font-family: "Poppins", sans-serif;
+}
+
+.confirmed-page h1 {
+    font-family: "Syne", sans-serif;
+}
+
+.confirmed-box-wrapper {
+    width: 220px;
+}
+
+.confirmed-box-svg {
+    width: 100%;
+    height: auto;
+    overflow: visible; /* essencial: senão os confetes cortam nas bordas do SVG */
+}
+
+.confetti-piece {
+    opacity: 0;
+}
+
+.confirmed-text {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.confirmed-eyebrow {
+    display: inline-block;
+    color: #B3C1D6;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.confirmed-text h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.confirmed-text p {
+    color: #D9D9D9;
+    opacity: .7;
+    font-size: .9rem;
+    max-width: 320px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.confirmed-card {
+    width: 100%;
+    max-width: 380px;
+    background: #26242D;
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 20px;
+    padding: 22px 26px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.confirmed-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: .88rem;
+}
+
+.confirmed-row span {
+    color: #8F8A9F;
+}
+
+.confirmed-row strong {
+    color: #D9D9D9;
+}
+
+.confirmed-actions {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.confirmed-cta {
+    background: #B3C1D6;
+    color: #1c1a22;
+    border: none;
+    padding: 16px 0;
+    border-radius: 999px;
+    font-family: "Syne", sans-serif;
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.confirmed-secondary {
+    background: none;
+    border: 1px solid rgba(255,255,255,.15);
+    color: #D9D9D9;
+    padding: 15px 0;
+    border-radius: 999px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: .85rem;
+    cursor: pointer;
+}

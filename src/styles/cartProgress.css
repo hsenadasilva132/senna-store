@@ -1,0 +1,152 @@
+.cart-progress {
+    background: linear-gradient(
+        139deg, 
+        #221F2B 0%, 
+        #26242d 48%, 
+        #201E27 100%
+    );
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 26px;
+    padding: 28px;
+    margin: 0 48px 36px 48px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, .18);
+}
+
+.progress-top {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.step {
+    background: #494654;
+    color: #E8E8EC;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.items-count {
+    color: #A6A5AE;
+    font-size: .95rem;
+}
+
+.progress-text {
+    margin-bottom: 28px;
+}
+
+.progress-text h2 {
+    color: #FFF;
+    font-size: 2.1rem;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.progress-text p {
+    color: #A5A5AE;
+    line-height: 1.8;
+    max-width: 520px;
+}
+
+.progress-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.progress-steps button {
+    font-family: "Poppins", sans-serif;
+    height: 52px;
+    border-radius: 14px;
+    background: transparent;
+    border: 1px solid #4A4654;
+    color: #D9D9D9;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.progress-steps button:hover {
+    border-color: #738DB5;
+    color: #FFF;
+}
+
+.progress-steps .active {
+    background: #494654;
+    color: #FFF;
+    border-color: #5B5766;
+}
+
+.delivery-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+    margin-top: 12px;
+}
+
+.delivery-info span, strong {
+    font-family: "Poppins", sans-serif;
+}
+
+.delivery-info span {
+    display: block;
+    color: #8C8B96;
+    font-size: .85rem;
+    margin-bottom: 6px;
+}
+
+.delivery-info strong {
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.delivery-items {
+    text-align: right;
+}
+
+@media(max-width: 768px) {
+    .cart-progress {
+        padding: 22px;
+    }
+
+    .progress-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .progress-steps {
+        gap: 10px;
+    }
+}
+
+@media(max-width: 540px) {
+    .progress-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .progress-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .delivery-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .delivery-items {
+        text-align: left;
+    }
+
+    .progress-text h2 {
+        font-size: 1.6rem;
+    }
+}

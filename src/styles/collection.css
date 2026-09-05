@@ -1,0 +1,129 @@
+.trending {
+    background-color: #26242D;
+    padding: clamp(60px, 10vw, 100px) 0;
+}
+
+.trending-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+
+}
+
+.trending-header h2 {
+    font-size: clamp(1.6rem, 4vw, 4rem);
+    margin: 8px 0 0 0;
+    color: #DCDCDC;
+    opacity: .8;
+}
+
+.trending-header span {
+    font-size: .8rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #B3C1D6;
+}
+
+.title-line {
+    width: 0;
+    height: 2px;
+    margin-top: 16px;
+    background: #B3C1D6;
+}
+
+
+.trending-content {
+    position: relative;
+    width: 100%;
+    min-height: clamp(480px, 60vw, 750px);
+    margin: 0 auto;
+    border-radius: 24px;
+    padding: clamp(20px, 3vw, 40px);
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+
+.banner-bg {
+    position: absolute;
+    inset: -30px;
+    background-image: url('../images/collectionBanner3.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    z-index: 1;
+    will-change: transform;
+}
+
+
+
+.trending-grid {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 620px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(16px, 3vw, 52px);
+    /* max-width: 560px; */
+}
+
+.trending-grid > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+.trending-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+@media(max-width: 1200px) {
+    .trending-grid {
+        max-width: 520px;
+    }
+}
+
+
+@media(max-width: 1024px) {
+    .trending-content {
+        justify-content: center;
+    }
+
+    .trending-grid {
+        max-width: 480px;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .trending-content {
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .trending-grid {
+        max-width: 420px;
+        gap: 16px;
+    }
+}
+
+@media(max-width: 480px) {
+    .trending-content {
+        padding: 20px;
+    }
+
+    .trending-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        gap: 20px;
+    }
+}

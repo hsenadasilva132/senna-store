@@ -1,0 +1,107 @@
+.shipping-freight {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.freight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.freight-header h2 {
+    color: #D9D9D9;
+    font-size: 1.7rem;
+}
+
+.freight-header span {
+    color: #D9D9D9;
+    font-family: "Poppins", sans-serif;
+    opacity: .6;
+}
+
+.freight-selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem;
+    border: 1px solid rgba(255, 255, 255, .05);
+    border-radius: 18px;
+    background: #2E2B3A;
+    color: #B3C1D6;
+    opacity: .5;
+}
+
+.freight-selected h3 {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+.freight-selected p {
+    color: var(--text-secondary);
+}
+
+.selected-price {
+    text-align: right;
+}
+
+.selected-price strong {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.freight-selected span {
+    font-family: "Poppins", sans-serif;
+}
+
+.change-shipping {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:.5rem;
+    background:none;
+    border:none;
+    cursor:pointer;
+    color: #D9D9D9;
+    font-family: "Poppins", sans-serif;
+    font-weight:600;
+}
+
+.chevron-icon {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.shipping-list {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.shipping-card{
+    color: #D9D9D9;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.2rem;
+    border:1px solid rgba(255, 255, 255, .05);
+    border-radius:18px;
+    background:transparent;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.shipping-card:hover{
+    border-color: #B3C1D6;
+    transform:translateY(-2px);
+}
+
+.shipping-card.active{
+    border-color: #B3C1D6;
+    background:rgba(180,190,210,.08);
+}
