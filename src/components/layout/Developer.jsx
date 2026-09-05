@@ -1,5 +1,5 @@
 import '../../styles/developer.css'
-import Curriculo from '../../assets/Henrique Sena da Silva.pdf';
+//import Curriculo from '../../assets/Henrique Sena da Silva.pdf';
 
 import htmlIcon from '../../assets/icons/html.svg';
 import cssIcon from '../../assets/icons/css.svg';
@@ -31,9 +31,15 @@ function Developer() {
                 <img src={mysqlIcon} alt="mysql" />
             </div>
 
-            <a href={Curriculo} download>
-                <button type='button'>Baixar Currículo</button>
-            </a>
+            
+            <button type='button' onClick={() => {
+                window.open(
+                    'https://www.linkedin.com/in/henrique-sena-da-silva/',
+                    '_blank',
+                    'noopener, noreferrer'
+                );
+                }}>Ver perfil profissional</button>
+
         </div>
     )
 }

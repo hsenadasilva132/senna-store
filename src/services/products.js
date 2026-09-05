@@ -41,9 +41,9 @@ import nikeVomero18 from '../assets/imagesTrending/nikeVomero18.webp';
 import nikePhantom6 from '../assets/imagesTrending/nikePhantom6.webp';
 import nikeRevolution7 from '../assets/imagesTrending/nikeRevolution7.webp';
 
-import Lifestyle1 from '../images/lifeStyle1.webp'
-import Lifestyle2 from '../images/lifeStyle2.webp'
-import Lifestyle3 from '../images/lifeStyle3.webp'
+import Lifestyle1 from '../images/lifestyle1.webp'
+import Lifestyle2 from '../images/lifestyle2.webp'
+import Lifestyle3 from '../images/lifestyle3.webp'
 
 export const products = [
         {
