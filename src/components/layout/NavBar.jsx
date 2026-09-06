@@ -150,7 +150,7 @@ export default function NavBar() {
 
     return (
         <>
-            <header className="navbar">
+            <header className={`navbar ${menuOpen ? 'navbar-hidden' : ''}`}>
                 <h2 className="logo" onClick={() => navigate('/')}>SennaStore</h2>
 
                 <div className="nav-icons">
