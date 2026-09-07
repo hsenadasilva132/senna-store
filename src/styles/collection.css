@@ -137,7 +137,7 @@
     }
 
     .trending-header h2 {
-        font-size: clamp(1.3rem, 2vw, 3rem);
+        font-size: clamp(1.9rem, 3vw, 4rem);
     }
 
     .trending-header span {
