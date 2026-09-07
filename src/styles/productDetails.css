@@ -219,8 +219,12 @@
 
     .gallery-main {
         order: 1;
-        max-height: 420px;
+        min-height: 0;
+        max-height: none;
         height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .gallery-main img {
@@ -232,5 +236,9 @@
     .product-container {
         gap: 16px;
         padding: 24px 0;
+    }
+
+    .gallery-main {
+        min-height: 0;
     }
 }
