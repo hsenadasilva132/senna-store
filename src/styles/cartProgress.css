@@ -150,3 +150,9 @@
         font-size: 1.6rem;
     }
 }
+
+@media(max-width: 600px) {
+    .cart-progress {
+        margin: 0 12px 8px 12px;
+    }
+}

@@ -493,7 +493,7 @@
     }
 
     .navbar {
-        width: calc(100% - 64px);
+        width: calc(100% - 72px);
         padding: 4px 16px;
     }
 

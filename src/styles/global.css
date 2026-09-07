@@ -302,7 +302,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-title {
-        max-width: 480px;
+        font-size: clamp(3.4rem, 5vh, 4.5rem);
+        max-width: 320px;
     }
 
     .hero-btn {

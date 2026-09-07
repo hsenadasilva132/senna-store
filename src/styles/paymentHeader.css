@@ -115,3 +115,10 @@
         background-size: 800px;
     }
 }
+
+@media(max-width: 600px) {
+    .payment-header span {
+        text-wrap: nowrap;
+        padding: 8px 16px;
+    }
+}

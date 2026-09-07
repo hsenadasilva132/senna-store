@@ -81,7 +81,7 @@
     --reveal: 0%;
     -webkit-mask-image: linear-gradient(135deg, black 0%, black calc(var(--reveal) - 15%), transparent var(--reveal));
     mask-image: linear-gradient(135deg, black 0%, black calc(var(--reveal) - 15%), transparent var(--reveal));
-    transition: --reveal 1.5s ease;
+    transition: --reveal .5s ease;
 }
 
 .payment-method-card.active::before {

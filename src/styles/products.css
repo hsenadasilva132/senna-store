@@ -175,7 +175,7 @@
     }
 
     .airmax-grid {
-        grid-template-columns: repeat(2fr, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
         "featured featured"
         "left right";
@@ -244,4 +244,22 @@
         font-size: 1.7rem;
     }
 
+    .airmax-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+        gap: 16px;
+    }
+
+
+    .airmax-grid .product-card {
+        width: 100%;
+        min-height: unset;
+    }
+
+    .airmax-grid .product-card:nth-child(1),
+    .airmax-grid .product-card:nth-child(2),
+    .airmax-grid .product-card:nth-child(3) {
+        grid-area: unset;
+        min-height: unset;
+    }
 }

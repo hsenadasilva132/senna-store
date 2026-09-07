@@ -116,6 +116,13 @@
     }
 }
 
+@media(max-width: 600px) {
+    .trending-header h2 {
+        text-wrap: wrap;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+}
+
 @media(max-width: 480px) {
     .trending-content {
         padding: 20px;

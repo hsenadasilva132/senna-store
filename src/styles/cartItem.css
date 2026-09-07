@@ -148,6 +148,11 @@
 }
 
 @media(max-width: 600px) {
+
+    .cart-item {
+        margin: 0 12px 8px 12px;
+    }
+
     .cart-item-top {
         flex-direction: column;
     }

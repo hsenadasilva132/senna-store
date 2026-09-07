@@ -86,3 +86,9 @@
         gap: 24px;
     }
 }
+
+@media(max-width: 500px) {
+    .category-products-grid {
+        grid-template-columns: 1fr;
+    }
+}

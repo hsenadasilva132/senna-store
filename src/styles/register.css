@@ -276,6 +276,11 @@
 }
 
 @media (max-width: 500px) {
+
+    .register-visual {
+        padding: 24px;
+    }
+
     .register-form-section {
         padding: 100px 20px 40px;
     }

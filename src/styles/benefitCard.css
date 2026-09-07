@@ -42,3 +42,24 @@
     object-fit: contain;
 }
 
+@media(max-width: 680px) {
+
+    .benefit-card {
+        height: 140px;
+    }
+
+    .benefit-card h3 {
+        margin: 0 0 8px;
+        font-size: .88rem;
+    }
+
+    .benefit-card img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .benefit-card p {
+        font-size: .6rem;
+        line-height: 1.1;
+    }
+}

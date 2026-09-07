@@ -176,3 +176,9 @@
 .save-address:hover {
     opacity: .9;
 }
+
+@media(max-width: 600px) {
+    .address-edit-card {
+        padding: 12px;
+    }
+}

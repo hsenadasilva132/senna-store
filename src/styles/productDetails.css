@@ -213,3 +213,8 @@
     }
 }
 
+@media(max-width: 500px) {
+    .product-container {
+        gap: 8px;
+    }
+}
