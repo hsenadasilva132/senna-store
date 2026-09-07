@@ -14,6 +14,9 @@
     margin: 8px 0 0 0;
     color: #DCDCDC;
     opacity: .8;
+    word-break: keep-all;      
+    overflow-wrap: normal;  
+    hyphens: none;   
 }
 
 .trending-header span {

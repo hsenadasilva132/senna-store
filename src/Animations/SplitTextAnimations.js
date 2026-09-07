@@ -9,7 +9,7 @@ export const splitTitleAnimation = (selector) => {
     document.fonts.ready.then(() => {
         // Só divide o texto após carregar a fonte,
         // Evitando que o layout mude (e force reflow) no meio da divisão
-        const split = SplitText.create(selector, { type: "chars" });
+        const split = SplitText.create(selector, { type: "words, chars", autoSplit: true });
 
         gsap.from(split.chars, {
             y: 100,
