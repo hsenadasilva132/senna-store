@@ -96,6 +96,7 @@
     }
 
     .shop-hero p {
-        font-size: .79rem;
+        font-size: .77rem;
+        max-width: 380px;
     }
 }

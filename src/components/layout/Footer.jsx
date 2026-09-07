@@ -5,7 +5,7 @@ import Developer from '../../components/layout/Developer';
 import { useEffect } from 'react';
 import { footerAnimation } from '../../Animations/footerAnimations';
 
-import instagramIcon from '../../assets/icons/instagram.svg';
+
 import githubIcon from '../../assets/icons/github.svg';
 import linkedinIcon from '../../assets/icons/linkedin.svg';
 
@@ -58,7 +58,6 @@ function Footer() {
                         <h3>Redes Sociais</h3>
 
                          <div className="social-links">
-                            <a href=""><img src={instagramIcon} alt="instagram" /></a>
                             <a href="https://github.com/hsenadasilva132" target='_blank'><img src={githubIcon} alt="github" /></a>
                             <a href="https://www.linkedin.com/in/henrique-sena-da-silva/" target='_blank'><img src={linkedinIcon} alt="linkedin" /></a>
                         </div> 
