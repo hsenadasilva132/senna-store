@@ -184,7 +184,7 @@
     .shop-sale {
         min-height: auto;
         grid-template-columns: 1fr;
-        padding: 2rem 2rem 2.5rem;
+        padding: 2rem .7rem 2.5rem;
         border-radius: 28px;
     }
 
