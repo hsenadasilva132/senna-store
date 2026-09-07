@@ -16,7 +16,6 @@
     opacity: .8;
     word-break: keep-all;      
     overflow-wrap: normal;  
-    hyphens: none;   
 }
 
 .trending-header span {

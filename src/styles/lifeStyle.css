@@ -4,7 +4,8 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 300px);
     gap: 20px;
-    padding-bottom: 10%;
+    padding-bottom: 0 5% 10%;
+    box-sizing: border-box;
 }
 
 .lifestyle-large {
@@ -121,6 +122,7 @@
         grid-template-columns: 2fr 1fr;
         grid-template-rows: repeat(2, 320px);
         gap: 20px;
+        padding: 0 5% 10%;
     }
 
     .lifestyle-large {
@@ -137,7 +139,9 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto auto;
         gap: 12px;
-        width: min(1200px, 100%);
+        width: 100%;
+        padding: 0 20px 60px;
+        box-sizing: border-box;
     }
 
     .lifestyle-large {
@@ -168,14 +172,17 @@
 @media(max-width: 600px) {
     .lifestyle-gallery {
         grid-template-columns: 1fr;
+        padding: 0 16px 48px;
     }
 
     .lifestyle-large, .lifestyle-small {
         grid-column: auto;
         height: 250px;
     }
+}
 
-    /* .related-grid {
+@media(max-width: 550px) {
+    .related-grid {
         grid-template-columns: 1fr;
-    } */
+    }
 }
