@@ -133,4 +133,12 @@
         max-width: 320px;
         gap: 20px;
     }
+
+    .trending-header h2 {
+        font-size: clamp(1.3rem, 2vw, 3rem);
+    }
+
+    .trending-header span {
+        font-size: .7rem;
+    }
 }

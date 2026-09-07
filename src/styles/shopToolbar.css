@@ -277,7 +277,7 @@
     }
 
     .shop-sale-filter {
-        width: 50%;
+        width: 100%;
     }
 
     .shop-search {
@@ -290,7 +290,7 @@
 
     .shop-toolbar-right {
         display: grid;
-        grid-template-columns: 0.5fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .shop-select {

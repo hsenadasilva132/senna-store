@@ -263,3 +263,13 @@
         min-height: unset;
     }
 }
+
+@media(max-width: 400px) {
+    .products-header {
+        flex-direction: column;
+    }
+
+    .category-header {
+        flex-direction: column;
+    }
+}
