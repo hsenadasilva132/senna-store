@@ -471,6 +471,7 @@
 
     .hamburger-btn {
         display: block;
+        margin-left: 8px;
     }
 
     .cart-count {
@@ -493,7 +494,7 @@
     }
 
     .navbar {
-        width: calc(100% - 72px);
+        width: calc(100% - 48px);
         padding: 4px 16px;
     }
 
@@ -501,14 +502,22 @@
         font-size: 1.2rem;
     }
 
+    .nav-icons {
+        gap: 10px;
+    }
+
     .nav-icons img.icon-bag, img.icon-search {
         width: 18px;
         height: 18px;
-        margin-left: 14px;
+        margin-left: 0;
     }
 
     .mobile-menu {
         width: 100%;
         max-width: none;
+    }
+
+    .hamburger-btn {
+        margin-left: 0;
     }
 }

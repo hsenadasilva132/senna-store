@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 36px;
     overflow: hidden;
@@ -12,6 +13,13 @@
         #222530,
         #17191f
     );
+}
+
+.payment-content h1,
+.payment-content p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .payment-header::before {
@@ -48,6 +56,8 @@
     position: relative;
     z-index: 2;
     max-width: 620px;
+    min-width: 0;
+    width: 100%;
 }
 
 .payment-content h1 {
@@ -116,7 +126,21 @@
     }
 }
 
+
 @media(max-width: 600px) {
+    .payment-header {
+        padding: 20px;
+    }
+
+    .payment-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .payment-content p {
+        font-size: .8rem;
+        max-width: 100%;
+    }
+
     .payment-header span {
         text-wrap: nowrap;
         padding: 8px 16px;

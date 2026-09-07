@@ -84,3 +84,18 @@
         max-width: 420px;
     }
 }
+
+@media(max-width: 600px) {
+
+    .shop-label {
+        font-size: .66rem;
+    }
+
+    .shop-hero h1 {
+        font-size: 3rem;
+    }
+
+    .shop-hero p {
+        font-size: .9rem;
+    }
+}
