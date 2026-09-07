@@ -202,10 +202,25 @@
 @media(max-width: 768px) {
     .product-container {
         grid-template-columns: 1fr;
+        padding: 40px 0;
+        gap: 24px;
+    }
+
+    .product-gallery {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .gallery-thumbnails {
+        flex-direction: row;
+        overflow-x: auto;
+        order: 2;
     }
 
     .gallery-main {
-        max-height: 550px;
+        order: 1;
+        max-height: 420px;
+        height: auto;
     }
 
     .gallery-main img {
@@ -215,6 +230,7 @@
 
 @media(max-width: 500px) {
     .product-container {
-        gap: 8px;
+        gap: 16px;
+        padding: 24px 0;
     }
 }
