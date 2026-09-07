@@ -136,7 +136,7 @@ function PaymentSummary() {
 
                 <div className='payment-summary-total' onClick={handleFinishOrder}>
                     <div>
-                        <span>Confirmar Pagamento</span>
+                        <span>Confirmar</span>
                         <small>Total incluindo o frete</small>
                     </div>
                     <h2>{formatPrice(checkoutTotal)}</h2>
